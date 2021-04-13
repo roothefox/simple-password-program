@@ -1,2 +1,2 @@
 # simple-password-program
-installation roothefox/simple-password-program
+installation git clone roothefox/simple-password-program
