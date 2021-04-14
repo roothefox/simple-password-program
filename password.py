@@ -10,13 +10,9 @@ passwd = input('enter a password ')
 
 dataset = string.ascii_lowercase + string.digits + string.punctuation
 
-
 error1 = ('password is too short, must be at least 8 characters long')
 error2 = ('password is too long, max 64 characters')
 error3 = ('password is 8 or more characters but does not meet all the requirements(at least one uppercaste character, 1 number and 1 symbol')
-
-
-
 
 def gener():
   print(error3)
@@ -24,16 +20,9 @@ def gener():
 
   if gen == ('yes'):
     passwod = ''.join(secrets.choice(dataset) for i in range(8, 64))
-    
     print(passwod)
-
   elif gen == ('no'):
     exit()
-
-if len(passwd) < 8:
-    print(error1)
-elif len(passwd) > 64:
-    print(error2)
 
 lCount = 0
 uCount = 0
@@ -56,5 +45,9 @@ elif len(passwd) >= 8 and len(passwd) <= 64 and nCount == 0:
   gener()
 elif len(passwd) >= 8 and len(passwd) <= 64 and uCount == 0:
   gener()
+elif len(passwd) < 8:
+    print(error1)
+elif len(passwd) > 64:
+    print(error2)
 else:
   print('password good')
